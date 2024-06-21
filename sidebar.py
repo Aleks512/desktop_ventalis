@@ -45,6 +45,7 @@ class Sidebar(QMainWindow, Ui_MainWindow):
 
     def switch_orders_page(self):
         self.stackedWidget.setCurrentIndex(3)
+        self.load_order_items()
 
     def switch_to_update_order_page(self):
         self.stackedWidget.setCurrentIndex(4)
@@ -90,3 +91,60 @@ class Sidebar(QMainWindow, Ui_MainWindow):
             self.tableWidget_2.resizeColumnsToContents()
         except Exception as e:
             QMessageBox.warning(self, 'Failed to Load Sent Messages', str(e))
+
+            # Méthode pour récupérer les messages reçus
+    def load_received_messages(self):
+        try:
+            messages = self.login_session.get_the_messages()
+            print("Messages received:", messages)  # Debug: print messages
+
+            # Configuration des en-têtes de colonnes
+            self.tableWidget.setColumnCount(4)
+            self.tableWidget.setHorizontalHeaderLabels(['ID', 'Sender Email', 'Content', 'Date'])
+
+            self.tableWidget.setRowCount(len(messages))
+            for row_num, message in enumerate(messages):
+                print("Adding message:", message)  # Debug: print each message
+                self.tableWidget.setItem(row_num, 0, QTableWidgetItem(str(message['id'])))
+                self.tableWidget.setItem(row_num, 1, QTableWidgetItem(message['sender_email']))
+                self.tableWidget.setItem(row_num, 2, QTableWidgetItem(message['content']))
+                self.tableWidget.setItem(row_num, 3, QTableWidgetItem(message['timestamp']))
+
+            # Ajuster la largeur des colonnes en fonction du contenu
+            self.tableWidget.resizeColumnsToContents()
+        except Exception as e:
+            QMessageBox.warning(self, 'Failed to Load Messages', str(e))
+
+    # Méthode pour charger les commandes
+    def load_order_items(self):
+        try:
+            orders = self.login_session.get_order_items()
+            print("Order items:", orders)  # Debug: print orders
+
+            # Assurez-vous que la table est correctement référencée
+            if not hasattr(self, 'table'):
+                print("Error: 'table' is not defined in self")
+                return
+
+            # Configuration des en-têtes de colonnes
+            self.table.setColumnCount(8)
+            self.table.setHorizontalHeaderLabels(
+                ['Order ID', 'Product Name', 'Customer Email', 'Status', 'Quantity', 'Comment', 'Date Added',
+                 'Order Number'])
+
+            self.table.setRowCount(len(orders))
+            for row_num, order in enumerate(orders):
+                print("Adding order:", order)  # Debug: print each order
+                self.table.setItem(row_num, 0, QTableWidgetItem(str(order['id'])))
+                self.table.setItem(row_num, 1, QTableWidgetItem(order['product']['name']))
+                self.table.setItem(row_num, 2, QTableWidgetItem(order['customer']['email']))
+                self.table.setItem(row_num, 3, QTableWidgetItem(order['status']))
+                self.table.setItem(row_num, 4, QTableWidgetItem(str(order['quantity'])))
+                self.table.setItem(row_num, 5, QTableWidgetItem(order['comment'] or ''))
+                self.table.setItem(row_num, 6, QTableWidgetItem(order['date_added']))
+                self.table.setItem(row_num, 7, QTableWidgetItem(str(order['order'])))
+
+            # Ajuster la largeur des colonnes en fonction du contenu
+            self.table.resizeColumnsToContents()
+        except Exception as e:
+            QMessageBox.warning(self, 'Failed to Load Orders', str(e))

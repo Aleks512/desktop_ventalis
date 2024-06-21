@@ -225,30 +225,30 @@ if __name__ == '__main__':
     # print(message_response)
 
     # GET SENT MESSAGES
-    sent_messages = login_session.get_sent_messages()
-    print(sent_messages)
+    # sent_messages = login_session.get_sent_messages()
+    # print(sent_messages)
 
     # GET MESSAGES
     # sent_messages = login_session.get_the_messages()
     # print(sent_messages)
 
     # GET ORDERS
-    # order_items = login_session.get_instance().get_order_items()
+    # order_items = login_session.get_order_items()
     # print(order_items)
 
-    # # UPDATE ORDER
-    # # Données à mettre à jour
-    # update_data = {
-    #     "status": "P",  # Exemple de mise à jour du statut
-    #     "comment": "Updated comment"  # Exemple de mise à jour d'un commentaire
-    # }
-    #
-    # # ID de l'item de commande à mettre à jour
-    # item_id = 123
-    #
-    # # Appel de la méthode pour mettre à jour l'item
-    # updated_item = login_session.patch_order_item(item_id, update_data)
-    # print(updated_item)
+    # UPDATE ORDER
+    # Données à mettre à jour
+    update_data = {
+        "status": "P",  # Exemple de mise à jour du statut
+        "comment": "Updated comment"  # Exemple de mise à jour d'un commentaire
+    }
+
+    # ID de l'item de commande à mettre à jour
+    item_id = 123
+
+    # Appel de la méthode pour mettre à jour l'item
+    updated_item = login_session.patch_order_item(item_id, update_data)
+    print(updated_item)
 
 
 
