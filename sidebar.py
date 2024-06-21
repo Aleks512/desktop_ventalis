@@ -1,5 +1,6 @@
-from PySide6.QtWidgets import QMainWindow
+from PySide6.QtWidgets import QMainWindow, QMessageBox
 from ui_sidebar import Ui_MainWindow
+from api_session import LoginSession
 
 class Sidebar(QMainWindow, Ui_MainWindow):
     def __init__(self, login_session):
@@ -27,6 +28,9 @@ class Sidebar(QMainWindow, Ui_MainWindow):
         self.big_msg_update_btn.clicked.connect(self.switch_to_update_order_page)
         #self.update_order_btn.clicked.connect(self.switch_to_update_order_page)
 
+        # Connexion pour la page de création de messages
+        self.send_masg_btn.clicked.connect(self.send_message)
+
     # Méthodes pour basculer entre les pages
     def switch_to_received_msg_page(self):
         self.stackedWidget.setCurrentIndex(0)
@@ -42,3 +46,17 @@ class Sidebar(QMainWindow, Ui_MainWindow):
 
     def switch_to_update_order_page(self):
         self.stackedWidget.setCurrentIndex(4)
+
+        # Méthode pour envoyer un message
+        def send_message(self):
+            receiver_email = self.receiver_mail_la.text()
+            content = self.msg_content_txEdit.toPlainText()
+            try:
+                message_response = self.login_session.create_message(receiver_email, content)
+                QMessageBox.information(self, 'Message Sent', f'Message to {receiver_email} sent successfully.')
+                print(message_response)
+                # Nettoyer les champs de saisie après l'envoi
+                self.receiver_mail_la.clear()
+                self.msg_content_txEdit.clear()
+            except Exception as e:
+                QMessageBox.warning(self, 'Message Failed', str(e))

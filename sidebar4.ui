@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1368</width>
-    <height>841</height>
+    <width>1364</width>
+    <height>833</height>
    </rect>
   </property>
   <property name="font">
@@ -523,7 +523,7 @@ color:black;
 </string>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>2</number>
        </property>
        <widget class="QWidget" name="ms_recus_page">
         <property name="font">
@@ -636,22 +636,6 @@ color:black;
           <property name="icon">
            <iconset resource="../pyQt5_prject/ressources.qrc">
             <normaloff>:/images/new_images/outline_shopping_bag_black_24dp.png</normaloff>:/images/new_images/outline_shopping_bag_black_24dp.png</iconset>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>Répondre :</string>
-          </property>
-          <property name="font">
-           <font>
-            <family>Arial Black</family>
-            <pointsize>10</pointsize>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="icon">
-           <iconset resource="../pyQt5_prject/ressources.qrc">
-            <normaloff>:/images/new_images/outline_send_black_24dp.png</normaloff>:/images/new_images/outline_send_black_24dp.png</iconset>
           </property>
          </column>
         </widget>
@@ -901,22 +885,6 @@ QPushButton:hover {
             <normaloff>:/images/new_images/outline_shopping_bag_black_24dp.png</normaloff>:/images/new_images/outline_shopping_bag_black_24dp.png</iconset>
           </property>
          </column>
-         <column>
-          <property name="text">
-           <string>Répondre :</string>
-          </property>
-          <property name="font">
-           <font>
-            <family>Arial Black</family>
-            <pointsize>10</pointsize>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="icon">
-           <iconset resource="../pyQt5_prject/ressources.qrc">
-            <normaloff>:/images/new_images/outline_send_black_24dp.png</normaloff>:/images/new_images/outline_send_black_24dp.png</iconset>
-          </property>
-         </column>
         </widget>
        </widget>
        <widget class="QWidget" name="orders_page">
@@ -1087,6 +1055,7 @@ QPushButton:hover {
        <property name="font">
         <font>
          <pointsize>21</pointsize>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
