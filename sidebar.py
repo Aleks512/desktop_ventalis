@@ -41,6 +41,7 @@ class Sidebar(QMainWindow, Ui_MainWindow):
 
     def switch_to_sentmsg_page(self):
         self.stackedWidget.setCurrentIndex(2)
+        self.load_sent_messages()
 
     def switch_orders_page(self):
         self.stackedWidget.setCurrentIndex(3)
@@ -63,24 +64,29 @@ class Sidebar(QMainWindow, Ui_MainWindow):
             QMessageBox.warning(self, 'Message Failed', str(e))
 
     # Méthode pour récupérer les messages reçus
-    def load_received_messages(self):
+    def load_sent_messages(self):
         try:
-            messages = self.login_session.get_the_messages()
-            print("Messages received:", messages)  # Debug: print messages
+            messages = self.login_session.get_sent_messages()
+            print("Sent messages:", messages)  # Debug: print messages
+
+            # Assurez-vous que la table est correctement référencée
+            if not hasattr(self, 'tableWidget_2'):
+                print("Error: 'tableWidget_2' is not defined in self")
+                return
 
             # Configuration des en-têtes de colonnes
-            self.tableWidget.setColumnCount(4)
-            self.tableWidget.setHorizontalHeaderLabels(['ID', 'Sender Email', 'Content', 'Date'])
+            self.tableWidget_2.setColumnCount(4)
+            self.tableWidget_2.setHorizontalHeaderLabels(['ID', 'Receiver Email', 'Content', 'Date'])
 
-            self.tableWidget.setRowCount(len(messages))
+            self.tableWidget_2.setRowCount(len(messages))
             for row_num, message in enumerate(messages):
-                print("Adding message:", message)  # Debug: print each message
-                self.tableWidget.setItem(row_num, 0, QTableWidgetItem(str(message['id'])))
-                self.tableWidget.setItem(row_num, 1, QTableWidgetItem(message['sender_email']))
-                self.tableWidget.setItem(row_num, 2, QTableWidgetItem(message['content']))
-                self.tableWidget.setItem(row_num, 3, QTableWidgetItem(message['timestamp']))
+                print("Adding sent message:", message)  # Debug: print each message
+                self.tableWidget_2.setItem(row_num, 0, QTableWidgetItem(str(message['id'])))
+                self.tableWidget_2.setItem(row_num, 1, QTableWidgetItem(message['receiver_email']))
+                self.tableWidget_2.setItem(row_num, 2, QTableWidgetItem(message['content']))
+                self.tableWidget_2.setItem(row_num, 3, QTableWidgetItem(message['timestamp']))
 
             # Ajuster la largeur des colonnes en fonction du contenu
-            self.tableWidget.resizeColumnsToContents()
+            self.tableWidget_2.resizeColumnsToContents()
         except Exception as e:
-            QMessageBox.warning(self, 'Failed to Load Messages', str(e))
+            QMessageBox.warning(self, 'Failed to Load Sent Messages', str(e))
