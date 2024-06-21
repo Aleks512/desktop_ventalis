@@ -1,0 +1,21 @@
+<RCC>
+  <qresource prefix="images">
+    <file>new_images/outline_account_circle_black_24dp.png</file>
+    <file>new_images/outline_account_circle_white_24dp.png</file>
+    <file>new_images/outline_inbox_black_24dp.png</file>
+    <file>new_images/outline_inbox_white_24dp.png</file>
+    <file>new_images/outline_send_black_24dp.png</file>
+    <file>new_images/outline_send_white_24dp.png</file>
+    <file>new_images/outline_shopping_bag_black_24dp.png</file>
+    <file>new_images/outline_shopping_bag_white_24dp.png</file>
+    <file>ui_images/image.png</file>
+    <file>ui_images/log_out_white.png</file>
+    <file>ui_images/menu.png</file>
+    <file>ui_images/messages_white.png</file>
+    <file>ui_images/notifications_white.png</file>
+    <file>ui_images/profile_white.png</file>
+    <file>ui_images/search.png</file>
+    <file>ui_images/settings_white.png</file>
+    <file>ui_images/ui_main.ui</file>
+  </qresource>
+</RCC>

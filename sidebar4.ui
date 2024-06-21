@@ -1,0 +1,1303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1368</width>
+    <height>841</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_3">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>6</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QWidget" name="icon_sidebar_wgt" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget {
+  
+	background-color: qradialgradient(spread:reflect, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0.29052 rgba(0, 152, 0, 255), stop:0.957187 rgba(0, 0, 0, 255));
+}
+
+QPushButton {
+    min-height: 50px;
+    max-height: 50px;
+text-align:left;
+border:none;
+padding-left:10px;
+color:white;
+
+}
+QPushButton:checked{
+background-color: black;
+color: rgb(13, 114, 17);
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="rightMargin">
+        <number>11</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_7">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="../pyQt5_prject/ressources.qrc">:/images/new_images/outline_account_circle_black_24dp.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <property name="spacing">
+          <number>15</number>
+         </property>
+         <property name="topMargin">
+          <number>15</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="msg_recus_btn">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../pyQt5_prject/ressources.qrc">
+             <normaloff>:/images/new_images/outline_inbox_white_24dp.png</normaloff>:/images/new_images/outline_inbox_white_24dp.png</iconset>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="msg_create_btn">
+           <property name="styleSheet">
+            <string notr="true">color : white;
+text-align:center;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../pyQt5_prject/ressources.qrc">
+             <normaloff>:/images/new_images/outline_send_white_24dp.png</normaloff>:/images/new_images/outline_send_white_24dp.png</iconset>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="msg_sent_btn">
+           <property name="styleSheet">
+            <string notr="true">color : white;
+text-align:center;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../pyQt5_prject/ressources.qrc">
+             <normaloff>:/images/ui_images/messages_white.png</normaloff>:/images/ui_images/messages_white.png</iconset>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="msg_orders_btn">
+           <property name="styleSheet">
+            <string notr="true">color : white;
+text-align:center;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../pyQt5_prject/ressources.qrc">
+             <normaloff>:/images/new_images/outline_shopping_bag_white_24dp.png</normaloff>:/images/new_images/outline_shopping_bag_white_24dp.png</iconset>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="msg_update_btn">
+           <property name="styleSheet">
+            <string notr="true">color : white;
+text-align:center;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../pyQt5_prject/ressources.qrc">
+             <normaloff>:/images/ui_images/notifications_white.png</normaloff>:/images/ui_images/notifications_white.png</iconset>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>268</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="msg_sent_btn_11">
+         <property name="styleSheet">
+          <string notr="true">color : white;
+text-align:center;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="../pyQt5_prject/ressources.qrc">
+           <normaloff>:/images/ui_images/log_out_white.png</normaloff>:/images/ui_images/log_out_white.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QWidget" name="icon_sidebar_wgt_2" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget {
+  
+	background-color: qradialgradient(spread:reflect, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0.29052 rgba(0, 152, 0, 255), stop:0.957187 rgba(0, 0, 0, 255));
+}
+
+QPushButton {
+    min-height: 50px;
+    max-height: 50px;
+    text-align: left;
+    border: none;
+    padding-left: 10px;
+    color: white;
+    border-top-left-radius: 10px;  /* Correction de &quot;border-top-leftr-radius&quot; */
+    border-bottom-left-radius: 10px;  /* Correction de &quot;border-bottom-leftr-radius&quot; */
+}
+
+QPushButton:checked {
+    background-color: black;
+    color: rgb(0, 255, 0);
+    font-weight: bold;
+}
+
+</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="rightMargin">
+        <number>11</number>
+       </property>
+       <item row="0" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_8">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="../pyQt5_prject/ressources.qrc">:/images/new_images/outline_account_circle_black_24dp.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <property name="spacing">
+          <number>15</number>
+         </property>
+         <property name="topMargin">
+          <number>15</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="big_msg_recus_btn">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>MESSAGES REÇUS     </string>
+           </property>
+           <property name="icon">
+            <iconset resource="../pyQt5_prject/ressources.qrc">
+             <normaloff>:/images/new_images/outline_inbox_white_24dp.png</normaloff>:/images/new_images/outline_inbox_white_24dp.png</iconset>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="big_msg_create_btn">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>CRÉER UN MESSAGE  </string>
+           </property>
+           <property name="icon">
+            <iconset resource="../pyQt5_prject/ressources.qrc">
+             <normaloff>:/images/new_images/outline_send_white_24dp.png</normaloff>:/images/new_images/outline_send_white_24dp.png</iconset>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="big_msg_sent_btn">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>MESSAGES ENVOYÉS</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../pyQt5_prject/ressources.qrc">
+             <normaloff>:/images/ui_images/messages_white.png</normaloff>:/images/ui_images/messages_white.png</iconset>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="big_msg_orders_btn">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>COMMANDES</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../pyQt5_prject/ressources.qrc">
+             <normaloff>:/images/new_images/outline_shopping_bag_white_24dp.png</normaloff>:/images/new_images/outline_shopping_bag_white_24dp.png</iconset>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="big_msg_update_btn">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>MISE A JOUR</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../pyQt5_prject/ressources.qrc">
+             <normaloff>:/images/ui_images/notifications_white.png</normaloff>:/images/ui_images/notifications_white.png</iconset>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="3" column="0" colspan="2">
+        <widget class="QPushButton" name="msg_sent_btn_16">
+         <property name="styleSheet">
+          <string notr="true">color : white;
+text-align:center;</string>
+         </property>
+         <property name="text">
+          <string>SE DECONNECTER</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../pyQt5_prject/ressources.qrc">
+           <normaloff>:/images/ui_images/log_out_white.png</normaloff>:/images/ui_images/log_out_white.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>268</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QWidget" name="main_screen_wdt" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget {
+  
+	background-color: qradialgradient(spread:reflect, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0.29052 rgba(0, 152, 0, 255), stop:0.957187 rgba(0, 0, 0, 255));
+color:black
+}</string>
+      </property>
+      <widget class="QStackedWidget" name="stackedWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>1000</width>
+         <height>701</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>1000</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+background-color: #F2F2F2;
+color:black;
+
+
+</string>
+       </property>
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <widget class="QWidget" name="ms_recus_page">
+        <property name="font">
+         <font>
+          <bold>true</bold>
+         </font>
+        </property>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>10</y>
+           <width>211</width>
+           <height>67</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Malgun Gothic</family>
+           <pointsize>15</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+           <underline>false</underline>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(85, 170, 0);</string>
+         </property>
+         <property name="text">
+          <string>Messages recus</string>
+         </property>
+        </widget>
+        <widget class="QTableWidget" name="tableWidget">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>130</y>
+           <width>931</width>
+           <height>411</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOn</enum>
+         </property>
+         <column>
+          <property name="text">
+           <string>De :</string>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial Black</family>
+            <pointsize>10</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="icon">
+           <iconset resource="../pyQt5_prject/ressources.qrc">
+            <normaloff>:/images/ui_images/image.png</normaloff>:/images/ui_images/image.png</iconset>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>A :</string>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial Black</family>
+            <pointsize>10</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="icon">
+           <iconset resource="../pyQt5_prject/ressources.qrc">
+            <normaloff>:/images/new_images/outline_account_circle_black_24dp.png</normaloff>:/images/new_images/outline_account_circle_black_24dp.png</iconset>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Date :</string>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial Black</family>
+            <pointsize>10</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="icon">
+           <iconset resource="../pyQt5_prject/ressources.qrc">
+            <normaloff>:/images/new_images/outline_inbox_black_24dp.png</normaloff>:/images/new_images/outline_inbox_black_24dp.png</iconset>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Message</string>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial Black</family>
+            <pointsize>10</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="icon">
+           <iconset resource="../pyQt5_prject/ressources.qrc">
+            <normaloff>:/images/new_images/outline_shopping_bag_black_24dp.png</normaloff>:/images/new_images/outline_shopping_bag_black_24dp.png</iconset>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Répondre :</string>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial Black</family>
+            <pointsize>10</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="icon">
+           <iconset resource="../pyQt5_prject/ressources.qrc">
+            <normaloff>:/images/new_images/outline_send_black_24dp.png</normaloff>:/images/new_images/outline_send_black_24dp.png</iconset>
+          </property>
+         </column>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="create_msg_page">
+        <property name="font">
+         <font>
+          <bold>true</bold>
+         </font>
+        </property>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>20</y>
+           <width>211</width>
+           <height>67</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Malgun Gothic</family>
+           <pointsize>15</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+           <underline>false</underline>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(85, 170, 0);</string>
+         </property>
+         <property name="text">
+          <string>Envoyer message</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>110</y>
+           <width>861</width>
+           <height>381</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QWidget" name="widget" native="true">
+            <layout class="QFormLayout" name="formLayout">
+             <property name="horizontalSpacing">
+              <number>1</number>
+             </property>
+             <property name="verticalSpacing">
+              <number>1</number>
+             </property>
+             <item row="0" column="0">
+              <widget class="QLabel" name="receiver_mail_le">
+               <property name="font">
+                <font>
+                 <family>Arial Black</family>
+                 <pointsize>10</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>To :</string>
+               </property>
+               <property name="scaledContents">
+                <bool>false</bool>
+               </property>
+               <property name="margin">
+                <number>10</number>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="receiver_mail_la">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>750</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="font">
+                <font/>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="msg_content_txEdit"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="send_masg_btn">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	background-color: qradialgradient(spread:reflect, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0.29052 rgba(0, 152, 0, 255), stop:0.957187 rgba(0, 0, 0, 255));
+    min-height: 50px;
+    max-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    border: 2px solid black; /* Ajout de 'solid black' pour spécifier le style et la couleur de la bordure */
+    color: black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+QPushButton:hover {
+    background-color: black;
+    color: rgb(0, 255, 0);
+    font-weight: bold;
+}
+
+</string>
+            </property>
+            <property name="text">
+             <string>Envoyer</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="sent_msg_page">
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>10</y>
+           <width>211</width>
+           <height>67</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Malgun Gothic</family>
+           <pointsize>15</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+           <underline>false</underline>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(85, 170, 0);</string>
+         </property>
+         <property name="text">
+          <string>Messages envoyés</string>
+         </property>
+        </widget>
+        <widget class="QTableWidget" name="tableWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>80</y>
+           <width>931</width>
+           <height>411</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOn</enum>
+         </property>
+         <column>
+          <property name="text">
+           <string>De :</string>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial Black</family>
+            <pointsize>10</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="icon">
+           <iconset resource="../pyQt5_prject/ressources.qrc">
+            <normaloff>:/images/ui_images/image.png</normaloff>:/images/ui_images/image.png</iconset>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>A :</string>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial Black</family>
+            <pointsize>10</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="icon">
+           <iconset resource="../pyQt5_prject/ressources.qrc">
+            <normaloff>:/images/new_images/outline_account_circle_black_24dp.png</normaloff>:/images/new_images/outline_account_circle_black_24dp.png</iconset>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Date :</string>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial Black</family>
+            <pointsize>10</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="icon">
+           <iconset resource="../pyQt5_prject/ressources.qrc">
+            <normaloff>:/images/new_images/outline_inbox_black_24dp.png</normaloff>:/images/new_images/outline_inbox_black_24dp.png</iconset>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Message</string>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial Black</family>
+            <pointsize>10</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="icon">
+           <iconset resource="../pyQt5_prject/ressources.qrc">
+            <normaloff>:/images/new_images/outline_shopping_bag_black_24dp.png</normaloff>:/images/new_images/outline_shopping_bag_black_24dp.png</iconset>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Répondre :</string>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial Black</family>
+            <pointsize>10</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="icon">
+           <iconset resource="../pyQt5_prject/ressources.qrc">
+            <normaloff>:/images/new_images/outline_send_black_24dp.png</normaloff>:/images/new_images/outline_send_black_24dp.png</iconset>
+          </property>
+         </column>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="orders_page">
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>10</y>
+           <width>251</width>
+           <height>67</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Malgun Gothic</family>
+           <pointsize>15</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+           <underline>false</underline>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(85, 170, 0);</string>
+         </property>
+         <property name="text">
+          <string>Articles commandés</string>
+         </property>
+        </widget>
+        <widget class="QTableWidget" name="table">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>100</y>
+           <width>961</width>
+           <height>331</height>
+          </rect>
+         </property>
+         <column>
+          <property name="text">
+           <string>ID de la commande</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Quantité</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <italic>false</italic>
+            <bold>true</bold>
+           </font>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Produit</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Prix unitaire</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Statut</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Société</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Client</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Commentaire</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+         </column>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="update_order_page">
+        <widget class="QLabel" name="label_6">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>10</y>
+           <width>411</width>
+           <height>67</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Malgun Gothic</family>
+           <pointsize>15</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+           <underline>false</underline>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(85, 170, 0);</string>
+         </property>
+         <property name="text">
+          <string>Changer le status de la commande</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>30</y>
+         <width>331</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>21</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>VENTALIS</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="../pyQt5_prject/ressources.qrc"/>
+  <include location="ressources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>msg_update_btn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>big_msg_update_btn</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>50</x>
+     <y>382</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>126</x>
+     <y>384</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>msg_orders_btn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>big_msg_orders_btn</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>33</x>
+     <y>319</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>115</x>
+     <y>323</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>msg_sent_btn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>big_msg_sent_btn</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>47</x>
+     <y>251</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>86</x>
+     <y>255</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>msg_create_btn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>big_msg_create_btn</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>44</x>
+     <y>186</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>117</x>
+     <y>185</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>msg_recus_btn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>big_msg_recus_btn</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>38</x>
+     <y>127</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>82</x>
+     <y>129</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>big_msg_update_btn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>msg_update_btn</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>84</x>
+     <y>395</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>38</x>
+     <y>399</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>big_msg_orders_btn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>msg_orders_btn</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>90</x>
+     <y>308</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>35</x>
+     <y>308</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>big_msg_sent_btn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>msg_sent_btn</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>87</x>
+     <y>243</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>30</x>
+     <y>245</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>big_msg_create_btn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>msg_create_btn</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>90</x>
+     <y>201</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>47</x>
+     <y>204</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>big_msg_recus_btn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>msg_recus_btn</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>88</x>
+     <y>112</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>48</x>
+     <y>113</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>msg_sent_btn_11</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>25</x>
+     <y>795</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>45</x>
+     <y>859</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>msg_sent_btn_16</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>statusbar</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>178</x>
+     <y>781</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>176</x>
+     <y>845</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

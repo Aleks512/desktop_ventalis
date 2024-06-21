@@ -1,0 +1,503 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class node5 as "PySide6.QtCore.QObject" {
+   __init__(self, parent: Optional[PySide6.QtCore.QObject] = ...): 
+   blockSignals(self, b: bool): 
+   childEvent(self, event: PySide6.QtCore.QChildEvent): 
+   children(self): 
+   connect(self, sender: PySide6.QtCore.QObject, signal: Union[bytes, bytearray, memoryview], member: Union[bytes, bytearray, memoryview], type: PySide6.QtCore.Qt.ConnectionType = ...): 
+   connect(self, signal: Union[bytes, bytearray, memoryview], functor: Callable, type: PySide6.QtCore.Qt.ConnectionType = ...): 
+   connect(self, signal: Union[bytes, bytearray, memoryview], receiver: PySide6.QtCore.QObject, method: Union[bytes, bytearray, memoryview], type: PySide6.QtCore.Qt.ConnectionType = ...): 
+   connect(sender: PySide6.QtCore.QObject, signal: PySide6.QtCore.QMetaMethod, receiver: PySide6.QtCore.QObject, method: PySide6.QtCore.QMetaMethod, type: PySide6.QtCore.Qt.ConnectionType = ...): 
+   connect(sender: PySide6.QtCore.QObject, signal: Union[bytes, bytearray, memoryview], context: PySide6.QtCore.QObject, functor: Callable, type: PySide6.QtCore.Qt.ConnectionType = ...): 
+   connect(sender: PySide6.QtCore.QObject, signal: Union[bytes, bytearray, memoryview], functor: Callable, type: PySide6.QtCore.Qt.ConnectionType = ...): 
+   connect(sender: PySide6.QtCore.QObject, signal: Union[bytes, bytearray, memoryview], receiver: PySide6.QtCore.QObject, member: Union[bytes, bytearray, memoryview], type: PySide6.QtCore.Qt.ConnectionType = ...): 
+   connectNotify(self, signal: PySide6.QtCore.QMetaMethod): 
+   customEvent(self, event: PySide6.QtCore.QEvent): 
+   deleteLater(self): 
+   disconnect(connection: PySide6.QtCore.QMetaObject.Connection): 
+   disconnect(self, receiver: PySide6.QtCore.QObject, member: Union[bytes, bytearray, memoryview, NoneType] = ...): 
+   disconnect(self, signal: Union[bytes, bytearray, memoryview], functor: Callable): 
+   disconnect(self, signal: Union[bytes, bytearray, memoryview], receiver: PySide6.QtCore.QObject, member: Union[bytes, bytearray, memoryview]): 
+   disconnect(sender: PySide6.QtCore.QObject, signal: PySide6.QtCore.QMetaMethod, receiver: PySide6.QtCore.QObject, member: PySide6.QtCore.QMetaMethod): 
+   disconnect(sender: PySide6.QtCore.QObject, signal: Union[bytes, bytearray, memoryview], functor: Callable): 
+   disconnect(sender: PySide6.QtCore.QObject, signal: Union[bytes, bytearray, memoryview], receiver: PySide6.QtCore.QObject, member: Union[bytes, bytearray, memoryview]): 
+   disconnectNotify(self, signal: PySide6.QtCore.QMetaMethod): 
+   dumpObjectInfo(self): 
+   dumpObjectTree(self): 
+   dynamicPropertyNames(self): 
+   emit(self, arg__1: Union[bytes, bytearray, memoryview], *args: None): 
+   event(self, event: PySide6.QtCore.QEvent): 
+   eventFilter(self, watched: PySide6.QtCore.QObject, event: PySide6.QtCore.QEvent): 
+   findChild(self, type: type, name: str = ..., options: PySide6.QtCore.Qt.FindChildOption = ...): 
+   findChildren(self, type: type, name: str = ..., options: PySide6.QtCore.Qt.FindChildOption = ...): 
+   findChildren(self, type: type, pattern: Union[PySide6.QtCore.QRegularExpression, str], options: PySide6.QtCore.Qt.FindChildOption = ...): 
+   inherits(self, classname: Union[bytes, bytearray, memoryview]): 
+   installEventFilter(self, filterObj: PySide6.QtCore.QObject): 
+   isQuickItemType(self): 
+   isSignalConnected(self, signal: PySide6.QtCore.QMetaMethod): 
+   isWidgetType(self): 
+   isWindowType(self): 
+   killTimer(self, id: int): 
+   metaObject(self): 
+   moveToThread(self, arg__1: PySide6.QtCore.QThread): 
+   objectName(self): 
+   parent(self): 
+   property(self, name: str): 
+   receivers(self, signal: Union[bytes, bytearray, memoryview]): 
+   removeEventFilter(self, obj: PySide6.QtCore.QObject): 
+   sender(self): 
+   senderSignalIndex(self): 
+   setObjectName(self, name: str): 
+   setParent(self, parent: Optional[PySide6.QtCore.QObject]): 
+   setProperty(self, name: str, value: Any): 
+   signalsBlocked(self): 
+   startTimer(self, interval: int, timerType: PySide6.QtCore.Qt.TimerType = ...): 
+   thread(self): 
+   timerEvent(self, event: PySide6.QtCore.QTimerEvent): 
+   tr(self, sourceText: str, disambiguation: Optional[str] = ..., n: int = ...): 
+}
+class node0 as "PySide6.QtGui.QPaintDevice" {
+   __init__(self): 
+   colorCount(self): 
+   depth(self): 
+   devType(self): 
+   devicePixelRatio(self): 
+   devicePixelRatioF(self): 
+   devicePixelRatioFScale(): 
+   height(self): 
+   heightMM(self): 
+   initPainter(self, painter: PySide6.QtGui.QPainter): 
+   logicalDpiX(self): 
+   logicalDpiY(self): 
+   metric(self, metric: PySide6.QtGui.QPaintDevice.PaintDeviceMetric): 
+   paintEngine(self): 
+   paintingActive(self): 
+   physicalDpiX(self): 
+   physicalDpiY(self): 
+   redirected(self, offset: PySide6.QtCore.QPoint): 
+   sharedPainter(self): 
+   width(self): 
+   widthMM(self): 
+}
+class node3 as "PySide6.QtWidgets.QMainWindow" {
+   __init__(self, parent: Optional[PySide6.QtWidgets.QWidget] = ..., flags: PySide6.QtCore.Qt.WindowType = ...): 
+   addDockWidget(self, area: PySide6.QtCore.Qt.DockWidgetArea, dockwidget: PySide6.QtWidgets.QDockWidget): 
+   addDockWidget(self, area: PySide6.QtCore.Qt.DockWidgetArea, dockwidget: PySide6.QtWidgets.QDockWidget, orientation: PySide6.QtCore.Qt.Orientation): 
+   addToolBar(self, area: PySide6.QtCore.Qt.ToolBarArea, toolbar: PySide6.QtWidgets.QToolBar): 
+   addToolBar(self, title: str): 
+   addToolBar(self, toolbar: PySide6.QtWidgets.QToolBar): 
+   addToolBarBreak(self, area: PySide6.QtCore.Qt.ToolBarArea = ...): 
+   centralWidget(self): 
+   contextMenuEvent(self, event: PySide6.QtGui.QContextMenuEvent): 
+   corner(self, corner: PySide6.QtCore.Qt.Corner): 
+   createPopupMenu(self): 
+   dockOptions(self): 
+   dockWidgetArea(self, dockwidget: PySide6.QtWidgets.QDockWidget): 
+   documentMode(self): 
+   event(self, event: PySide6.QtCore.QEvent): 
+   iconSize(self): 
+   insertToolBar(self, before: PySide6.QtWidgets.QToolBar, toolbar: PySide6.QtWidgets.QToolBar): 
+   insertToolBarBreak(self, before: PySide6.QtWidgets.QToolBar): 
+   isAnimated(self): 
+   isDockNestingEnabled(self): 
+   isSeparator(self, pos: PySide6.QtCore.QPoint): 
+   menuBar(self): 
+   menuWidget(self): 
+   removeDockWidget(self, dockwidget: PySide6.QtWidgets.QDockWidget): 
+   removeToolBar(self, toolbar: PySide6.QtWidgets.QToolBar): 
+   removeToolBarBreak(self, before: PySide6.QtWidgets.QToolBar): 
+   resizeDocks(self, docks: Sequence[PySide6.QtWidgets.QDockWidget], sizes: Sequence[int], orientation: PySide6.QtCore.Qt.Orientation): 
+   restoreDockWidget(self, dockwidget: PySide6.QtWidgets.QDockWidget): 
+   restoreState(self, state: Union[PySide6.QtCore.QByteArray, bytes, bytearray, memoryview], version: int = ...): 
+   saveState(self, version: int = ...): 
+   setAnimated(self, enabled: bool): 
+   setCentralWidget(self, widget: PySide6.QtWidgets.QWidget): 
+   setCorner(self, corner: PySide6.QtCore.Qt.Corner, area: PySide6.QtCore.Qt.DockWidgetArea): 
+   setDockNestingEnabled(self, enabled: bool): 
+   setDockOptions(self, options: PySide6.QtWidgets.QMainWindow.DockOption): 
+   setDocumentMode(self, enabled: bool): 
+   setIconSize(self, iconSize: PySide6.QtCore.QSize): 
+   setMenuBar(self, menubar: PySide6.QtWidgets.QMenuBar): 
+   setMenuWidget(self, menubar: PySide6.QtWidgets.QWidget): 
+   setStatusBar(self, statusbar: PySide6.QtWidgets.QStatusBar): 
+   setTabPosition(self, areas: PySide6.QtCore.Qt.DockWidgetArea, tabPosition: PySide6.QtWidgets.QTabWidget.TabPosition): 
+   setTabShape(self, tabShape: PySide6.QtWidgets.QTabWidget.TabShape): 
+   setToolButtonStyle(self, toolButtonStyle: PySide6.QtCore.Qt.ToolButtonStyle): 
+   setUnifiedTitleAndToolBarOnMac(self, set: bool): 
+   splitDockWidget(self, after: PySide6.QtWidgets.QDockWidget, dockwidget: PySide6.QtWidgets.QDockWidget, orientation: PySide6.QtCore.Qt.Orientation): 
+   statusBar(self): 
+   tabPosition(self, area: PySide6.QtCore.Qt.DockWidgetArea): 
+   tabShape(self): 
+   tabifiedDockWidgets(self, dockwidget: PySide6.QtWidgets.QDockWidget): 
+   tabifyDockWidget(self, first: PySide6.QtWidgets.QDockWidget, second: PySide6.QtWidgets.QDockWidget): 
+   takeCentralWidget(self): 
+   toolBarArea(self, toolbar: PySide6.QtWidgets.QToolBar): 
+   toolBarBreak(self, toolbar: PySide6.QtWidgets.QToolBar): 
+   toolButtonStyle(self): 
+   unifiedTitleAndToolBarOnMac(self): 
+}
+class node8 as "PySide6.QtWidgets.QWidget" {
+   __init__(self, parent: Optional[PySide6.QtWidgets.QWidget] = ..., f: PySide6.QtCore.Qt.WindowType = ...): 
+   acceptDrops(self): 
+   accessibleDescription(self): 
+   accessibleName(self): 
+   actionEvent(self, event: PySide6.QtGui.QActionEvent): 
+   actions(self): 
+   activateWindow(self): 
+   addAction(self, action: PySide6.QtGui.QAction): 
+   addAction(self, icon: Union[PySide6.QtGui.QIcon, PySide6.QtGui.QPixmap], text: str): 
+   addAction(self, icon: Union[PySide6.QtGui.QIcon, PySide6.QtGui.QPixmap], text: str, callable: object): 
+   addAction(self, icon: Union[PySide6.QtGui.QIcon, PySide6.QtGui.QPixmap], text: str, receiver: PySide6.QtCore.QObject, member: Union[bytes, bytearray, memoryview], type: PySide6.QtCore.Qt.ConnectionType = ...): 
+   addAction(self, icon: Union[PySide6.QtGui.QIcon, PySide6.QtGui.QPixmap], text: str, shortcut: Union[PySide6.QtGui.QKeySequence, PySide6.QtCore.QKeyCombination, PySide6.QtGui.QKeySequence.StandardKey, str, int]): 
+   addAction(self, icon: Union[PySide6.QtGui.QIcon, PySide6.QtGui.QPixmap], text: str, shortcut: Union[PySide6.QtGui.QKeySequence, PySide6.QtCore.QKeyCombination, PySide6.QtGui.QKeySequence.StandardKey, str, int], callable: object): 
+   addAction(self, icon: Union[PySide6.QtGui.QIcon, PySide6.QtGui.QPixmap], text: str, shortcut: Union[PySide6.QtGui.QKeySequence, PySide6.QtCore.QKeyCombination, PySide6.QtGui.QKeySequence.StandardKey, str, int], receiver: PySide6.QtCore.QObject, member: Union[bytes, bytearray, memoryview], type: PySide6.QtCore.Qt.ConnectionType = ...): 
+   addAction(self, text: str): 
+   addAction(self, text: str, callable: object): 
+   addAction(self, text: str, receiver: PySide6.QtCore.QObject, member: Union[bytes, bytearray, memoryview], type: PySide6.QtCore.Qt.ConnectionType = ...): 
+   addAction(self, text: str, shortcut: Union[PySide6.QtGui.QKeySequence, PySide6.QtCore.QKeyCombination, PySide6.QtGui.QKeySequence.StandardKey, str, int]): 
+   addAction(self, text: str, shortcut: Union[PySide6.QtGui.QKeySequence, PySide6.QtCore.QKeyCombination, PySide6.QtGui.QKeySequence.StandardKey, str, int], callable: object): 
+   addAction(self, text: str, shortcut: Union[PySide6.QtGui.QKeySequence, PySide6.QtCore.QKeyCombination, PySide6.QtGui.QKeySequence.StandardKey, str, int], receiver: PySide6.QtCore.QObject, member: Union[bytes, bytearray, memoryview], type: PySide6.QtCore.Qt.ConnectionType = ...): 
+   addActions(self, actions: Sequence[PySide6.QtGui.QAction]): 
+   adjustSize(self): 
+   autoFillBackground(self): 
+   backgroundRole(self): 
+   backingStore(self): 
+   baseSize(self): 
+   changeEvent(self, event: PySide6.QtCore.QEvent): 
+   childAt(self, p: PySide6.QtCore.QPoint): 
+   childAt(self, x: int, y: int): 
+   childrenRect(self): 
+   childrenRegion(self): 
+   clearFocus(self): 
+   clearMask(self): 
+   close(self): 
+   closeEvent(self, event: PySide6.QtGui.QCloseEvent): 
+   contentsMargins(self): 
+   contentsRect(self): 
+   contextMenuEvent(self, event: PySide6.QtGui.QContextMenuEvent): 
+   contextMenuPolicy(self): 
+   create(self, arg__1: int = ..., initializeWindow: bool = ..., destroyOldWindow: bool = ...): 
+   createWinId(self): 
+   createWindowContainer(window: PySide6.QtGui.QWindow, parent: Optional[PySide6.QtWidgets.QWidget] = ..., flags: PySide6.QtCore.Qt.WindowType = ...): 
+   cursor(self): 
+   destroy(self, destroyWindow: bool = ..., destroySubWindows: bool = ...): 
+   devType(self): 
+   dragEnterEvent(self, event: PySide6.QtGui.QDragEnterEvent): 
+   dragLeaveEvent(self, event: PySide6.QtGui.QDragLeaveEvent): 
+   dragMoveEvent(self, event: PySide6.QtGui.QDragMoveEvent): 
+   dropEvent(self, event: PySide6.QtGui.QDropEvent): 
+   effectiveWinId(self): 
+   ensurePolished(self): 
+   enterEvent(self, event: PySide6.QtGui.QEnterEvent): 
+   event(self, event: PySide6.QtCore.QEvent): 
+   find(arg__1: int): 
+   focusInEvent(self, event: PySide6.QtGui.QFocusEvent): 
+   focusNextChild(self): 
+   focusNextPrevChild(self, next: bool): 
+   focusOutEvent(self, event: PySide6.QtGui.QFocusEvent): 
+   focusPolicy(self): 
+   focusPreviousChild(self): 
+   focusProxy(self): 
+   focusWidget(self): 
+   font(self): 
+   fontInfo(self): 
+   fontMetrics(self): 
+   foregroundRole(self): 
+   frameGeometry(self): 
+   frameSize(self): 
+   geometry(self): 
+   grab(self, rectangle: PySide6.QtCore.QRect = ...): 
+   grabGesture(self, type: PySide6.QtCore.Qt.GestureType, flags: PySide6.QtCore.Qt.GestureFlag = ...): 
+   grabKeyboard(self): 
+   grabMouse(self): 
+   grabMouse(self, arg__1: Union[PySide6.QtGui.QCursor, PySide6.QtCore.Qt.CursorShape, PySide6.QtGui.QPixmap]): 
+   grabShortcut(self, key: Union[PySide6.QtGui.QKeySequence, PySide6.QtCore.QKeyCombination, PySide6.QtGui.QKeySequence.StandardKey, str, int], context: PySide6.QtCore.Qt.ShortcutContext = ...): 
+   graphicsEffect(self): 
+   graphicsProxyWidget(self): 
+   hasFocus(self): 
+   hasHeightForWidth(self): 
+   hasMouseTracking(self): 
+   hasTabletTracking(self): 
+   height(self): 
+   heightForWidth(self, arg__1: int): 
+   hide(self): 
+   hideEvent(self, event: PySide6.QtGui.QHideEvent): 
+   initPainter(self, painter: PySide6.QtGui.QPainter): 
+   inputMethodEvent(self, event: PySide6.QtGui.QInputMethodEvent): 
+   inputMethodHints(self): 
+   inputMethodQuery(self, arg__1: PySide6.QtCore.Qt.InputMethodQuery): 
+   insertAction(self, before: PySide6.QtGui.QAction, action: PySide6.QtGui.QAction): 
+   insertActions(self, before: PySide6.QtGui.QAction, actions: Sequence[PySide6.QtGui.QAction]): 
+   internalWinId(self): 
+   isActiveWindow(self): 
+   isAncestorOf(self, child: PySide6.QtWidgets.QWidget): 
+   isEnabled(self): 
+   isEnabledTo(self, arg__1: PySide6.QtWidgets.QWidget): 
+   isFullScreen(self): 
+   isHidden(self): 
+   isLeftToRight(self): 
+   isMaximized(self): 
+   isMinimized(self): 
+   isModal(self): 
+   isRightToLeft(self): 
+   isTopLevel(self): 
+   isVisible(self): 
+   isVisibleTo(self, arg__1: PySide6.QtWidgets.QWidget): 
+   isWindow(self): 
+   isWindowModified(self): 
+   keyPressEvent(self, event: PySide6.QtGui.QKeyEvent): 
+   keyReleaseEvent(self, event: PySide6.QtGui.QKeyEvent): 
+   keyboardGrabber(): 
+   layout(self): 
+   layoutDirection(self): 
+   leaveEvent(self, event: PySide6.QtCore.QEvent): 
+   locale(self): 
+   lower(self): 
+   mapFrom(self, arg__1: PySide6.QtWidgets.QWidget, arg__2: PySide6.QtCore.QPoint): 
+   mapFrom(self, arg__1: PySide6.QtWidgets.QWidget, arg__2: Union[PySide6.QtCore.QPointF, PySide6.QtCore.QPoint, PySide6.QtGui.QPainterPath.Element]): 
+   mapFromGlobal(self, arg__1: PySide6.QtCore.QPoint): 
+   mapFromGlobal(self, arg__1: Union[PySide6.QtCore.QPointF, PySide6.QtCore.QPoint, PySide6.QtGui.QPainterPath.Element]): 
+   mapFromParent(self, arg__1: PySide6.QtCore.QPoint): 
+   mapFromParent(self, arg__1: Union[PySide6.QtCore.QPointF, PySide6.QtCore.QPoint, PySide6.QtGui.QPainterPath.Element]): 
+   mapTo(self, arg__1: PySide6.QtWidgets.QWidget, arg__2: PySide6.QtCore.QPoint): 
+   mapTo(self, arg__1: PySide6.QtWidgets.QWidget, arg__2: Union[PySide6.QtCore.QPointF, PySide6.QtCore.QPoint, PySide6.QtGui.QPainterPath.Element]): 
+   mapToGlobal(self, arg__1: PySide6.QtCore.QPoint): 
+   mapToGlobal(self, arg__1: Union[PySide6.QtCore.QPointF, PySide6.QtCore.QPoint, PySide6.QtGui.QPainterPath.Element]): 
+   mapToParent(self, arg__1: PySide6.QtCore.QPoint): 
+   mapToParent(self, arg__1: Union[PySide6.QtCore.QPointF, PySide6.QtCore.QPoint, PySide6.QtGui.QPainterPath.Element]): 
+   mask(self): 
+   maximumHeight(self): 
+   maximumSize(self): 
+   maximumWidth(self): 
+   metric(self, arg__1: PySide6.QtGui.QPaintDevice.PaintDeviceMetric): 
+   minimumHeight(self): 
+   minimumSize(self): 
+   minimumSizeHint(self): 
+   minimumWidth(self): 
+   mouseDoubleClickEvent(self, event: PySide6.QtGui.QMouseEvent): 
+   mouseGrabber(): 
+   mouseMoveEvent(self, event: PySide6.QtGui.QMouseEvent): 
+   mousePressEvent(self, event: PySide6.QtGui.QMouseEvent): 
+   mouseReleaseEvent(self, event: PySide6.QtGui.QMouseEvent): 
+   move(self, arg__1: PySide6.QtCore.QPoint): 
+   move(self, x: int, y: int): 
+   moveEvent(self, event: PySide6.QtGui.QMoveEvent): 
+   nativeEvent(self, eventType: Union[PySide6.QtCore.QByteArray, bytes, bytearray, memoryview], message: int): 
+   nativeParentWidget(self): 
+   nextInFocusChain(self): 
+   normalGeometry(self): 
+   overrideWindowFlags(self, type: PySide6.QtCore.Qt.WindowType): 
+   overrideWindowState(self, state: PySide6.QtCore.Qt.WindowState): 
+   paintEngine(self): 
+   paintEvent(self, event: PySide6.QtGui.QPaintEvent): 
+   palette(self): 
+   parentWidget(self): 
+   pos(self): 
+   previousInFocusChain(self): 
+   raise_(self): 
+   rect(self): 
+   redirected(self, offset: PySide6.QtCore.QPoint): 
+   releaseKeyboard(self): 
+   releaseMouse(self): 
+   releaseShortcut(self, id: int): 
+   removeAction(self, action: PySide6.QtGui.QAction): 
+   render(self, painter: PySide6.QtGui.QPainter, targetOffset: PySide6.QtCore.QPoint, sourceRegion: Union[PySide6.QtGui.QRegion, PySide6.QtGui.QBitmap, PySide6.QtGui.QPolygon, PySide6.QtCore.QRect] = ..., renderFlags: PySide6.QtWidgets.QWidget.RenderFlag = ...): 
+   render(self, target: PySide6.QtGui.QPaintDevice, targetOffset: PySide6.QtCore.QPoint = ..., sourceRegion: Union[PySide6.QtGui.QRegion, PySide6.QtGui.QBitmap, PySide6.QtGui.QPolygon, PySide6.QtCore.QRect] = ..., renderFlags: PySide6.QtWidgets.QWidget.RenderFlag = ...): 
+   repaint(self): 
+   repaint(self, arg__1: PySide6.QtCore.QRect): 
+   repaint(self, arg__1: Union[PySide6.QtGui.QRegion, PySide6.QtGui.QBitmap, PySide6.QtGui.QPolygon, PySide6.QtCore.QRect]): 
+   repaint(self, x: int, y: int, w: int, h: int): 
+   resize(self, arg__1: PySide6.QtCore.QSize): 
+   resize(self, w: int, h: int): 
+   resizeEvent(self, event: PySide6.QtGui.QResizeEvent): 
+   restoreGeometry(self, geometry: Union[PySide6.QtCore.QByteArray, bytes, bytearray, memoryview]): 
+   saveGeometry(self): 
+   screen(self): 
+   scroll(self, dx: int, dy: int): 
+   scroll(self, dx: int, dy: int, arg__3: PySide6.QtCore.QRect): 
+   setAcceptDrops(self, on: bool): 
+   setAccessibleDescription(self, description: str): 
+   setAccessibleName(self, name: str): 
+   setAttribute(self, arg__1: PySide6.QtCore.Qt.WidgetAttribute, on: bool = ...): 
+   setAutoFillBackground(self, enabled: bool): 
+   setBackgroundRole(self, arg__1: PySide6.QtGui.QPalette.ColorRole): 
+   setBaseSize(self, arg__1: PySide6.QtCore.QSize): 
+   setBaseSize(self, basew: int, baseh: int): 
+   setContentsMargins(self, left: int, top: int, right: int, bottom: int): 
+   setContentsMargins(self, margins: PySide6.QtCore.QMargins): 
+   setContextMenuPolicy(self, policy: PySide6.QtCore.Qt.ContextMenuPolicy): 
+   setCursor(self, arg__1: Union[PySide6.QtGui.QCursor, PySide6.QtCore.Qt.CursorShape, PySide6.QtGui.QPixmap]): 
+   setDisabled(self, arg__1: bool): 
+   setEnabled(self, arg__1: bool): 
+   setFixedHeight(self, h: int): 
+   setFixedSize(self, arg__1: PySide6.QtCore.QSize): 
+   setFixedSize(self, w: int, h: int): 
+   setFixedWidth(self, w: int): 
+   setFocus(self): 
+   setFocus(self, reason: PySide6.QtCore.Qt.FocusReason): 
+   setFocusPolicy(self, policy: PySide6.QtCore.Qt.FocusPolicy): 
+   setFocusProxy(self, arg__1: PySide6.QtWidgets.QWidget): 
+   setFont(self, arg__1: Union[PySide6.QtGui.QFont, str, Sequence[str]]): 
+   setForegroundRole(self, arg__1: PySide6.QtGui.QPalette.ColorRole): 
+   setGeometry(self, arg__1: PySide6.QtCore.QRect): 
+   setGeometry(self, x: int, y: int, w: int, h: int): 
+   setGraphicsEffect(self, effect: PySide6.QtWidgets.QGraphicsEffect): 
+   setHidden(self, hidden: bool): 
+   setInputMethodHints(self, hints: PySide6.QtCore.Qt.InputMethodHint): 
+   setLayout(self, arg__1: PySide6.QtWidgets.QLayout): 
+   setLayoutDirection(self, direction: PySide6.QtCore.Qt.LayoutDirection): 
+   setLocale(self, locale: Union[PySide6.QtCore.QLocale, PySide6.QtCore.QLocale.Language]): 
+   setMask(self, arg__1: Union[PySide6.QtGui.QBitmap, str]): 
+   setMask(self, arg__1: Union[PySide6.QtGui.QRegion, PySide6.QtGui.QBitmap, PySide6.QtGui.QPolygon, PySide6.QtCore.QRect]): 
+   setMaximumHeight(self, maxh: int): 
+   setMaximumSize(self, arg__1: PySide6.QtCore.QSize): 
+   setMaximumSize(self, maxw: int, maxh: int): 
+   setMaximumWidth(self, maxw: int): 
+   setMinimumHeight(self, minh: int): 
+   setMinimumSize(self, arg__1: PySide6.QtCore.QSize): 
+   setMinimumSize(self, minw: int, minh: int): 
+   setMinimumWidth(self, minw: int): 
+   setMouseTracking(self, enable: bool): 
+   setPalette(self, arg__1: Union[PySide6.QtGui.QPalette, PySide6.QtCore.Qt.GlobalColor, PySide6.QtGui.QColor]): 
+   setParent(self, parent: Optional[PySide6.QtWidgets.QWidget]): 
+   setParent(self, parent: Optional[PySide6.QtWidgets.QWidget], f: PySide6.QtCore.Qt.WindowType): 
+   setScreen(self, arg__1: PySide6.QtGui.QScreen): 
+   setShortcutAutoRepeat(self, id: int, enable: bool = ...): 
+   setShortcutEnabled(self, id: int, enable: bool = ...): 
+   setSizeIncrement(self, arg__1: PySide6.QtCore.QSize): 
+   setSizeIncrement(self, w: int, h: int): 
+   setSizePolicy(self, arg__1: PySide6.QtWidgets.QSizePolicy): 
+   setSizePolicy(self, horizontal: PySide6.QtWidgets.QSizePolicy.Policy, vertical: PySide6.QtWidgets.QSizePolicy.Policy): 
+   setStatusTip(self, arg__1: str): 
+   setStyle(self, arg__1: PySide6.QtWidgets.QStyle): 
+   setStyleSheet(self, styleSheet: str): 
+   setTabOrder(arg__1: PySide6.QtWidgets.QWidget, arg__2: PySide6.QtWidgets.QWidget): 
+   setTabletTracking(self, enable: bool): 
+   setToolTip(self, arg__1: str): 
+   setToolTipDuration(self, msec: int): 
+   setUpdatesEnabled(self, enable: bool): 
+   setVisible(self, visible: bool): 
+   setWhatsThis(self, arg__1: str): 
+   setWindowFilePath(self, filePath: str): 
+   setWindowFlag(self, arg__1: PySide6.QtCore.Qt.WindowType, on: bool = ...): 
+   setWindowFlags(self, type: PySide6.QtCore.Qt.WindowType): 
+   setWindowIcon(self, icon: Union[PySide6.QtGui.QIcon, PySide6.QtGui.QPixmap]): 
+   setWindowIconText(self, arg__1: str): 
+   setWindowModality(self, windowModality: PySide6.QtCore.Qt.WindowModality): 
+   setWindowModified(self, arg__1: bool): 
+   setWindowOpacity(self, level: float): 
+   setWindowRole(self, arg__1: str): 
+   setWindowState(self, state: PySide6.QtCore.Qt.WindowState): 
+   setWindowTitle(self, arg__1: str): 
+   sharedPainter(self): 
+   show(self): 
+   showEvent(self, event: PySide6.QtGui.QShowEvent): 
+   showFullScreen(self): 
+   showMaximized(self): 
+   showMinimized(self): 
+   showNormal(self): 
+   size(self): 
+   sizeHint(self): 
+   sizeIncrement(self): 
+   sizePolicy(self): 
+   stackUnder(self, arg__1: PySide6.QtWidgets.QWidget): 
+   statusTip(self): 
+   style(self): 
+   styleSheet(self): 
+   tabletEvent(self, event: PySide6.QtGui.QTabletEvent): 
+   testAttribute(self, arg__1: PySide6.QtCore.Qt.WidgetAttribute): 
+   toolTip(self): 
+   toolTipDuration(self): 
+   topLevelWidget(self): 
+   underMouse(self): 
+   ungrabGesture(self, type: PySide6.QtCore.Qt.GestureType): 
+   unsetCursor(self): 
+   unsetLayoutDirection(self): 
+   unsetLocale(self): 
+   update(self): 
+   update(self, arg__1: PySide6.QtCore.QRect): 
+   update(self, arg__1: Union[PySide6.QtGui.QRegion, PySide6.QtGui.QBitmap, PySide6.QtGui.QPolygon, PySide6.QtCore.QRect]): 
+   update(self, x: int, y: int, w: int, h: int): 
+   updateGeometry(self): 
+   updateMicroFocus(self, query: PySide6.QtCore.Qt.InputMethodQuery = ...): 
+   updatesEnabled(self): 
+   visibleRegion(self): 
+   whatsThis(self): 
+   wheelEvent(self, event: PySide6.QtGui.QWheelEvent): 
+   width(self): 
+   winId(self): 
+   window(self): 
+   windowFilePath(self): 
+   windowFlags(self): 
+   windowHandle(self): 
+   windowIcon(self): 
+   windowIconText(self): 
+   windowModality(self): 
+   windowOpacity(self): 
+   windowRole(self): 
+   windowState(self): 
+   windowTitle(self): 
+   windowType(self): 
+   x(self): 
+   y(self): 
+}
+class object {
+   __class__(self: Self): 
+   __class__(self, __type: type[object]): 
+   __init__(self): 
+   __new__(cls: type[Self]): 
+   __setattr__(self, __name: str, __value: Any): 
+   __delattr__(self, __name: str): 
+   __eq__(self, __o: object): 
+   __ne__(self, __o: object): 
+   __str__(self): 
+   __repr__(self): 
+   __hash__(self): 
+   __format__(self, __format_spec: str): 
+   __getattribute__(self, __name: str): 
+   __sizeof__(self): 
+   __reduce__(self): 
+   __reduce_ex__(self, __protocol: SupportsIndex): 
+   __reduce_ex__(self, __protocol: int): 
+   __dir__(self): 
+   __init_subclass__(cls): 
+}
+class node1 as "shiboken6.Shiboken.Object" {
+   __init__(self): 
+}
+class node2 as "sidebar.Sidebar" {
+   __init__(self, login_session: LoginSession): 
+   format_timestamp(self, timestamp): 
+   swith_to_received_msg_page(self): 
+   swith_to_create_msg_page(self): 
+   swith_to_sentmsg_page(self): 
+   swith_orders_page(self): 
+   swith_to_update_order_page(self): 
+   load_messages(self): 
+   send_message(self): 
+   load_sent_messages(self): 
+}
+class node6 as "typing.Hashable" {
+   __hash__(self): 
+}
+class node7 as "ui_sidebar.Ui_MainWindow" {
+   setupUi(self, MainWindow): 
+   retranslateUi(self, MainWindow): 
+}
+
+node5   ^-[#595959,plain]-  node1  
+node0   ^-[#595959,plain]-  node1  
+node3   ^-[#595959,plain]-  node8  
+node8   ^-[#595959,plain]-  node5  
+node8   ^-[#595959,plain]-  node0  
+object  ^-[#595959,dashed]-  node6  
+node1   ^-[#595959,plain]-  object 
+node2   ^-[#595959,plain]-  node3  
+node2   ^-[#595959,plain]-  node7  
+node7   ^-[#595959,plain]-  object 
+@enduml

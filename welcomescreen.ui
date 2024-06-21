@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>welcome</class>
+ <widget class="QDialog" name="welcome">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1112</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>welcomescreen</string>
+  </property>
+  <widget class="QWidget" name="bg_widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>-40</x>
+     <y>10</y>
+     <width>1200</width>
+     <height>800</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget#bg_widget{
+background-color: qradialgradient(spread:reflect, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0.29052 rgba(0, 152, 0, 255), stop:0.957187 rgba(0, 0, 0, 255));}</string>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>340</y>
+      <width>281</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 36pt &quot;Century Schoolbook&quot;; color :rgb(0, 0, 0);
+font: 36pt &quot;Sylfaen&quot;;</string>
+    </property>
+    <property name="text">
+     <string>VENTALIS</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="login">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>410</y>
+      <width>281</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color : rgb(0, 255, 0);
+background-color: black;
+
+font: 14pt &quot;MS Shell Dlg 2&quot;;
+border-color: white;
+border-style: solid;
+border-style: solid;
+border-radius: 30px;</string>
+    </property>
+    <property name="text">
+     <string>Connexion</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
