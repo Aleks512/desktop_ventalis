@@ -217,16 +217,16 @@ if __name__ == '__main__':
     login_session = LoginSession.get_instance('joe.black@ventalis.com', 'MerryChristmas&12')
 
 
-    #SEND MESSAGE
-    receiver_email = 'meghan.m@mail.com'
-    content = 'Sroda '
+    # #SEND MESSAGE
+    # receiver_email = 'meghan.m@mail.com'
+    # content = 'Sroda '
+    #
+    # message_response = login_session.create_message(receiver_email, content)
+    # print(message_response)
 
-    message_response = login_session.create_message(receiver_email, content)
-    print(message_response)
-
-    # GET SEBT MESSAGES
-    sent_messages = login_session.get_sent_messages()
-    print(sent_messages)
+    # # GET SEBT MESSAGES
+    # sent_messages = login_session.get_sent_messages()
+    # print(sent_messages)
 
     # GET MESSAGES
     sent_messages = login_session.get_the_messages()

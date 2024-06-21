@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QMainWindow, QMessageBox
+from PySide6.QtWidgets import QMainWindow, QMessageBox, QTableWidgetItem
 from ui_sidebar import Ui_MainWindow
 from api_session import LoginSession
 
@@ -34,6 +34,7 @@ class Sidebar(QMainWindow, Ui_MainWindow):
     # Méthodes pour basculer entre les pages
     def switch_to_received_msg_page(self):
         self.stackedWidget.setCurrentIndex(0)
+        self.load_received_messages()
 
     def switch_to_create_msg_page(self):
         self.stackedWidget.setCurrentIndex(1)
@@ -47,16 +48,39 @@ class Sidebar(QMainWindow, Ui_MainWindow):
     def switch_to_update_order_page(self):
         self.stackedWidget.setCurrentIndex(4)
 
-        # Méthode pour envoyer un message
-        def send_message(self):
-            receiver_email = self.receiver_mail_la.text()
-            content = self.msg_content_txEdit.toPlainText()
-            try:
-                message_response = self.login_session.create_message(receiver_email, content)
-                QMessageBox.information(self, 'Message Sent', f'Message to {receiver_email} sent successfully.')
-                print(message_response)
-                # Nettoyer les champs de saisie après l'envoi
-                self.receiver_mail_la.clear()
-                self.msg_content_txEdit.clear()
-            except Exception as e:
-                QMessageBox.warning(self, 'Message Failed', str(e))
+    # Méthode pour envoyer un message
+    def send_message(self):
+        receiver_email = self.receiver_mail_la.text()
+        content = self.msg_content_txEdit.toPlainText()
+        try:
+            message_response = self.login_session.create_message(receiver_email, content)
+            QMessageBox.information(self, 'Message Sent', f'Message to {receiver_email} sent successfully.')
+            print(message_response)
+            # Nettoyer les champs de saisie après l'envoi
+            self.receiver_mail_la.clear()
+            self.msg_content_txEdit.clear()
+        except Exception as e:
+            QMessageBox.warning(self, 'Message Failed', str(e))
+
+    # Méthode pour récupérer les messages reçus
+    def load_received_messages(self):
+        try:
+            messages = self.login_session.get_the_messages()
+            print("Messages received:", messages)  # Debug: print messages
+
+            # Configuration des en-têtes de colonnes
+            self.tableWidget.setColumnCount(4)
+            self.tableWidget.setHorizontalHeaderLabels(['ID', 'Sender Email', 'Content', 'Date'])
+
+            self.tableWidget.setRowCount(len(messages))
+            for row_num, message in enumerate(messages):
+                print("Adding message:", message)  # Debug: print each message
+                self.tableWidget.setItem(row_num, 0, QTableWidgetItem(str(message['id'])))
+                self.tableWidget.setItem(row_num, 1, QTableWidgetItem(message['sender_email']))
+                self.tableWidget.setItem(row_num, 2, QTableWidgetItem(message['content']))
+                self.tableWidget.setItem(row_num, 3, QTableWidgetItem(message['timestamp']))
+
+            # Ajuster la largeur des colonnes en fonction du contenu
+            self.tableWidget.resizeColumnsToContents()
+        except Exception as e:
+            QMessageBox.warning(self, 'Failed to Load Messages', str(e))
