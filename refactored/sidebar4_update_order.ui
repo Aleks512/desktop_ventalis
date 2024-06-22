@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1364</width>
-    <height>833</height>
+    <width>1302</width>
+    <height>825</height>
    </rect>
   </property>
   <property name="font">
@@ -187,6 +187,27 @@ text-align:center;</string>
            </property>
           </widget>
          </item>
+         <item>
+          <widget class="QPushButton" name="msg_update_btn">
+           <property name="styleSheet">
+            <string notr="true">color : white;
+text-align:center;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../pyQt5_prject/ressources.qrc">
+             <normaloff>:/images/ui_images/notifications_white.png</normaloff>:/images/ui_images/notifications_white.png</iconset>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
         </layout>
        </item>
        <item>
@@ -203,7 +224,7 @@ text-align:center;</string>
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="icon_logout_btn">
+        <widget class="QPushButton" name="msg_sent_btn_11">
          <property name="styleSheet">
           <string notr="true">color : white;
 text-align:center;</string>
@@ -400,10 +421,30 @@ QPushButton:checked {
            </property>
           </widget>
          </item>
+         <item>
+          <widget class="QPushButton" name="big_msg_update_btn">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>MISE A JOUR</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../pyQt5_prject/ressources.qrc">
+             <normaloff>:/images/ui_images/notifications_white.png</normaloff>:/images/ui_images/notifications_white.png</iconset>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
         </layout>
        </item>
        <item row="3" column="0" colspan="2">
-        <widget class="QPushButton" name="logout_btn">
+        <widget class="QPushButton" name="msg_sent_btn_16">
          <property name="styleSheet">
           <string notr="true">color : white;
 text-align:center;</string>
@@ -456,10 +497,10 @@ color:black
       <widget class="QStackedWidget" name="stackedWidget">
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>90</y>
+         <x>0</x>
+         <y>60</y>
          <width>1000</width>
-         <height>701</height>
+         <height>611</height>
         </rect>
        </property>
        <property name="maximumSize">
@@ -973,7 +1014,111 @@ QPushButton:hover {
          </column>
         </widget>
        </widget>
-       <widget class="QWidget" name="update_order_page"/>
+       <widget class="QWidget" name="update_order_page">
+        <widget class="QLabel" name="titre_label">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>10</y>
+           <width>411</width>
+           <height>67</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Malgun Gothic</family>
+           <pointsize>15</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+           <underline>false</underline>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(85, 170, 0);</string>
+         </property>
+         <property name="text">
+          <string>Changer le status de la commande</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_11">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>80</y>
+           <width>801</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(0, 85, 0);
+font: 700 11pt &quot;Segoe UI&quot;;
+background-color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>Saisir :        P' _('En attente') |PR' _('En traitement') | 'S', _('Expédié') | 'D', _('Livré') | 'R', _('Retourné')</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="envoyer_btn">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>340</y>
+           <width>75</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Envoyer</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>180</y>
+           <width>140</width>
+           <height>161</height>
+          </rect>
+         </property>
+         <layout class="QFormLayout" name="formLayout_2">
+          <item row="1" column="0">
+           <widget class="QLineEdit" name="nr_order_lineEdit"/>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLineEdit" name="status_lineEdit"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="status_label">
+            <property name="text">
+             <string>Status</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="order_id_label">
+            <property name="text">
+             <string>Ordr_ID</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLineEdit" name="comment_lineEdit"/>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="comment_label">
+            <property name="text">
+             <string>Comment</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <zorder>envoyer_btn</zorder>
+        <zorder>titre_label</zorder>
+        <zorder>layoutWidget</zorder>
+        <zorder>label_11</zorder>
+       </widget>
       </widget>
       <widget class="QLabel" name="label">
        <property name="geometry">
@@ -1008,6 +1153,22 @@ QPushButton:hover {
   <include location="ressources.qrc"/>
  </resources>
  <connections>
+  <connection>
+   <sender>msg_update_btn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>big_msg_update_btn</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>50</x>
+     <y>382</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>126</x>
+     <y>384</y>
+    </hint>
+   </hints>
+  </connection>
   <connection>
    <sender>msg_orders_btn</sender>
    <signal>toggled(bool)</signal>
@@ -1069,6 +1230,22 @@ QPushButton:hover {
     <hint type="destinationlabel">
      <x>82</x>
      <y>129</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>big_msg_update_btn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>msg_update_btn</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>84</x>
+     <y>395</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>38</x>
+     <y>399</y>
     </hint>
    </hints>
   </connection>
@@ -1137,7 +1314,7 @@ QPushButton:hover {
    </hints>
   </connection>
   <connection>
-   <sender>icon_logout_btn</sender>
+   <sender>msg_sent_btn_11</sender>
    <signal>toggled(bool)</signal>
    <receiver>MainWindow</receiver>
    <slot>close()</slot>
@@ -1153,7 +1330,7 @@ QPushButton:hover {
    </hints>
   </connection>
   <connection>
-   <sender>logout_btn</sender>
+   <sender>msg_sent_btn_16</sender>
    <signal>toggled(bool)</signal>
    <receiver>statusbar</receiver>
    <slot>close()</slot>

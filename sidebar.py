@@ -1,6 +1,7 @@
 from PySide6.QtWidgets import QMainWindow, QMessageBox, QTableWidgetItem
 from ui_sidebar import Ui_MainWindow
 from api_session import LoginSession
+from PySide6.QtCore import QCoreApplication
 
 class Sidebar(QMainWindow, Ui_MainWindow):
     def __init__(self, login_session):
@@ -25,8 +26,9 @@ class Sidebar(QMainWindow, Ui_MainWindow):
         self.big_msg_orders_btn.clicked.connect(self.switch_orders_page)
         self.msg_orders_btn.clicked.connect(self.switch_orders_page)
 
-        self.big_msg_update_btn.clicked.connect(self.switch_to_update_order_page)
-        #self.update_order_btn.clicked.connect(self.switch_to_update_order_page)
+        # Connexion des boutons de déconnexion à la méthode logout
+        self.logout_btn.clicked.connect(self.logout)
+        self.icon_logout_btn.clicked.connect(self.logout)
 
         # Connexion pour la page de création de messages
         self.send_masg_btn.clicked.connect(self.send_message)
@@ -68,9 +70,7 @@ class Sidebar(QMainWindow, Ui_MainWindow):
     def load_sent_messages(self):
         try:
             messages = self.login_session.get_sent_messages()
-            print("Sent messages:", messages)  # Debug: print messages
-
-            # Assurez-vous que la table est correctement référencée
+            # print("Sent messages:", messages)  # Debug: print messages
             if not hasattr(self, 'tableWidget_2'):
                 print("Error: 'tableWidget_2' is not defined in self")
                 return
@@ -148,3 +148,12 @@ class Sidebar(QMainWindow, Ui_MainWindow):
             self.table.resizeColumnsToContents()
         except Exception as e:
             QMessageBox.warning(self, 'Failed to Load Orders', str(e))
+
+    # Méthode pour se déconnecter
+    def logout(self):
+        try:
+            self.login_session.logout()
+            QMessageBox.information(self, 'Logout Successful', 'You have been logged out successfully.')
+            QCoreApplication.instance().quit()  # Fermer l'application
+        except Exception as e:
+            QMessageBox.warning(self, 'Logout Failed', str(e))

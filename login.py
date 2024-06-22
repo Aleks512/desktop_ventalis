@@ -16,7 +16,7 @@ class LoginScreen(QDialog, Ui_Dialog):
         email = self.email_input.text()
         password = self.pwd_input.text()
         try:
-            # Utilisez get_instance pour initialiser ou récupérer l'instance singleton.
+            # Utiliser get_instance pour initialiser ou récupérer l'instance singleton.
             login_session = LoginSession.get_instance(email, password)
             QMessageBox.information(self, 'Login Successful', f'Bonjour {email}.')
             # Transition vers Sidebar avec l'instance de session.

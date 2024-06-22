@@ -130,18 +130,6 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.msg_orders_btn)
 
-        self.msg_update_btn = QPushButton(self.icon_sidebar_wgt)
-        self.msg_update_btn.setObjectName(u"msg_update_btn")
-        self.msg_update_btn.setStyleSheet(u"color : white;\n"
-"text-align:center;")
-        icon4 = QIcon()
-        icon4.addFile(u":/images/ui_images/notifications_white.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.msg_update_btn.setIcon(icon4)
-        self.msg_update_btn.setCheckable(True)
-        self.msg_update_btn.setAutoExclusive(True)
-
-        self.verticalLayout.addWidget(self.msg_update_btn)
-
 
         self.verticalLayout_3.addLayout(self.verticalLayout)
 
@@ -149,15 +137,15 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_3.addItem(self.verticalSpacer_2)
 
-        self.msg_sent_btn_11 = QPushButton(self.icon_sidebar_wgt)
-        self.msg_sent_btn_11.setObjectName(u"msg_sent_btn_11")
-        self.msg_sent_btn_11.setStyleSheet(u"color : white;\n"
+        self.icon_logout_btn = QPushButton(self.icon_sidebar_wgt)
+        self.icon_logout_btn.setObjectName(u"icon_logout_btn")
+        self.icon_logout_btn.setStyleSheet(u"color : white;\n"
 "text-align:center;")
-        icon5 = QIcon()
-        icon5.addFile(u":/images/ui_images/log_out_white.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.msg_sent_btn_11.setIcon(icon5)
+        icon4 = QIcon()
+        icon4.addFile(u":/images/ui_images/log_out_white.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.icon_logout_btn.setIcon(icon4)
 
-        self.verticalLayout_3.addWidget(self.msg_sent_btn_11)
+        self.verticalLayout_3.addWidget(self.icon_logout_btn)
 
 
         self.gridLayout_3.addWidget(self.icon_sidebar_wgt, 0, 0, 1, 1)
@@ -257,25 +245,16 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_5.addWidget(self.big_msg_orders_btn)
 
-        self.big_msg_update_btn = QPushButton(self.icon_sidebar_wgt_2)
-        self.big_msg_update_btn.setObjectName(u"big_msg_update_btn")
-        self.big_msg_update_btn.setStyleSheet(u"")
-        self.big_msg_update_btn.setIcon(icon4)
-        self.big_msg_update_btn.setCheckable(True)
-        self.big_msg_update_btn.setAutoExclusive(True)
-
-        self.verticalLayout_5.addWidget(self.big_msg_update_btn)
-
 
         self.gridLayout.addLayout(self.verticalLayout_5, 1, 0, 1, 2)
 
-        self.msg_sent_btn_16 = QPushButton(self.icon_sidebar_wgt_2)
-        self.msg_sent_btn_16.setObjectName(u"msg_sent_btn_16")
-        self.msg_sent_btn_16.setStyleSheet(u"color : white;\n"
+        self.logout_btn = QPushButton(self.icon_sidebar_wgt_2)
+        self.logout_btn.setObjectName(u"logout_btn")
+        self.logout_btn.setStyleSheet(u"color : white;\n"
 "text-align:center;")
-        self.msg_sent_btn_16.setIcon(icon5)
+        self.logout_btn.setIcon(icon4)
 
-        self.gridLayout.addWidget(self.msg_sent_btn_16, 3, 0, 1, 2)
+        self.gridLayout.addWidget(self.logout_btn, 3, 0, 1, 2)
 
         self.verticalSpacer_3 = QSpacerItem(20, 268, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
@@ -328,33 +307,33 @@ class Ui_MainWindow(object):
         self.tableWidget = QTableWidget(self.ms_recus_page)
         if (self.tableWidget.columnCount() < 4):
             self.tableWidget.setColumnCount(4)
-        icon6 = QIcon()
-        icon6.addFile(u":/images/ui_images/image.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon5 = QIcon()
+        icon5.addFile(u":/images/ui_images/image.png", QSize(), QIcon.Normal, QIcon.Off)
         font3 = QFont()
         font3.setFamilies([u"Arial Black"])
         font3.setPointSize(10)
         font3.setBold(True)
         __qtablewidgetitem = QTableWidgetItem()
         __qtablewidgetitem.setFont(font3);
-        __qtablewidgetitem.setIcon(icon6);
+        __qtablewidgetitem.setIcon(icon5);
         self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
-        icon7 = QIcon()
-        icon7.addFile(u":/images/new_images/outline_account_circle_black_24dp.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon6 = QIcon()
+        icon6.addFile(u":/images/new_images/outline_account_circle_black_24dp.png", QSize(), QIcon.Normal, QIcon.Off)
         __qtablewidgetitem1 = QTableWidgetItem()
         __qtablewidgetitem1.setFont(font3);
-        __qtablewidgetitem1.setIcon(icon7);
+        __qtablewidgetitem1.setIcon(icon6);
         self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
-        icon8 = QIcon()
-        icon8.addFile(u":/images/new_images/outline_inbox_black_24dp.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon7 = QIcon()
+        icon7.addFile(u":/images/new_images/outline_inbox_black_24dp.png", QSize(), QIcon.Normal, QIcon.Off)
         __qtablewidgetitem2 = QTableWidgetItem()
         __qtablewidgetitem2.setFont(font3);
-        __qtablewidgetitem2.setIcon(icon8);
+        __qtablewidgetitem2.setIcon(icon7);
         self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
-        icon9 = QIcon()
-        icon9.addFile(u":/images/new_images/outline_shopping_bag_black_24dp.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon8 = QIcon()
+        icon8.addFile(u":/images/new_images/outline_shopping_bag_black_24dp.png", QSize(), QIcon.Normal, QIcon.Off)
         __qtablewidgetitem3 = QTableWidgetItem()
         __qtablewidgetitem3.setFont(font3);
-        __qtablewidgetitem3.setIcon(icon9);
+        __qtablewidgetitem3.setIcon(icon8);
         self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
         self.tableWidget.setObjectName(u"tableWidget")
         self.tableWidget.setGeometry(QRect(30, 130, 931, 411))
@@ -446,19 +425,19 @@ class Ui_MainWindow(object):
             self.tableWidget_2.setColumnCount(4)
         __qtablewidgetitem4 = QTableWidgetItem()
         __qtablewidgetitem4.setFont(font3);
-        __qtablewidgetitem4.setIcon(icon6);
+        __qtablewidgetitem4.setIcon(icon5);
         self.tableWidget_2.setHorizontalHeaderItem(0, __qtablewidgetitem4)
         __qtablewidgetitem5 = QTableWidgetItem()
         __qtablewidgetitem5.setFont(font3);
-        __qtablewidgetitem5.setIcon(icon7);
+        __qtablewidgetitem5.setIcon(icon6);
         self.tableWidget_2.setHorizontalHeaderItem(1, __qtablewidgetitem5)
         __qtablewidgetitem6 = QTableWidgetItem()
         __qtablewidgetitem6.setFont(font3);
-        __qtablewidgetitem6.setIcon(icon8);
+        __qtablewidgetitem6.setIcon(icon7);
         self.tableWidget_2.setHorizontalHeaderItem(2, __qtablewidgetitem6)
         __qtablewidgetitem7 = QTableWidgetItem()
         __qtablewidgetitem7.setFont(font3);
-        __qtablewidgetitem7.setIcon(icon9);
+        __qtablewidgetitem7.setIcon(icon8);
         self.tableWidget_2.setHorizontalHeaderItem(3, __qtablewidgetitem7)
         self.tableWidget_2.setObjectName(u"tableWidget_2")
         self.tableWidget_2.setGeometry(QRect(30, 80, 931, 411))
@@ -511,11 +490,6 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.orders_page)
         self.update_order_page = QWidget()
         self.update_order_page.setObjectName(u"update_order_page")
-        self.label_6 = QLabel(self.update_order_page)
-        self.label_6.setObjectName(u"label_6")
-        self.label_6.setGeometry(QRect(30, 10, 411, 67))
-        self.label_6.setFont(font2)
-        self.label_6.setStyleSheet(u"color: rgb(85, 170, 0);")
         self.stackedWidget.addWidget(self.update_order_page)
         self.label = QLabel(self.main_screen_wdt)
         self.label.setObjectName(u"label")
@@ -534,20 +508,18 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.msg_update_btn.toggled.connect(self.big_msg_update_btn.setChecked)
         self.msg_orders_btn.toggled.connect(self.big_msg_orders_btn.setChecked)
         self.msg_sent_btn.toggled.connect(self.big_msg_sent_btn.setChecked)
         self.msg_create_btn.toggled.connect(self.big_msg_create_btn.setChecked)
         self.msg_recus_btn.toggled.connect(self.big_msg_recus_btn.setChecked)
-        self.big_msg_update_btn.toggled.connect(self.msg_update_btn.setChecked)
         self.big_msg_orders_btn.toggled.connect(self.msg_orders_btn.setChecked)
         self.big_msg_sent_btn.toggled.connect(self.msg_sent_btn.setChecked)
         self.big_msg_create_btn.toggled.connect(self.msg_create_btn.setChecked)
         self.big_msg_recus_btn.toggled.connect(self.msg_recus_btn.setChecked)
-        self.msg_sent_btn_11.toggled.connect(MainWindow.close)
-        self.msg_sent_btn_16.toggled.connect(self.statusbar.close)
+        self.icon_logout_btn.toggled.connect(MainWindow.close)
+        self.logout_btn.toggled.connect(self.statusbar.close)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(4)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -560,15 +532,13 @@ class Ui_MainWindow(object):
         self.msg_create_btn.setText("")
         self.msg_sent_btn.setText("")
         self.msg_orders_btn.setText("")
-        self.msg_update_btn.setText("")
-        self.msg_sent_btn_11.setText("")
+        self.icon_logout_btn.setText("")
         self.label_8.setText("")
         self.big_msg_recus_btn.setText(QCoreApplication.translate("MainWindow", u"MESSAGES RE\u00c7US     ", None))
         self.big_msg_create_btn.setText(QCoreApplication.translate("MainWindow", u"CR\u00c9ER UN MESSAGE  ", None))
         self.big_msg_sent_btn.setText(QCoreApplication.translate("MainWindow", u"MESSAGES ENVOY\u00c9S", None))
         self.big_msg_orders_btn.setText(QCoreApplication.translate("MainWindow", u"COMMANDES", None))
-        self.big_msg_update_btn.setText(QCoreApplication.translate("MainWindow", u"MISE A JOUR", None))
-        self.msg_sent_btn_16.setText(QCoreApplication.translate("MainWindow", u"SE DECONNECTER", None))
+        self.logout_btn.setText(QCoreApplication.translate("MainWindow", u"SE DECONNECTER", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Messages recus", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"De :", None));
@@ -608,7 +578,6 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem14.setText(QCoreApplication.translate("MainWindow", u"Client", None));
         ___qtablewidgetitem15 = self.table.horizontalHeaderItem(7)
         ___qtablewidgetitem15.setText(QCoreApplication.translate("MainWindow", u"Commentaire", None));
-        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Changer le status de la commande", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"VENTALIS", None))
     # retranslateUi
 
